@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'Widgets/FormCard.dart';
+import 'Widgets/SignUpForm.dart';
 import 'Widgets/SocialIcons.dart';
 import 'CustomIcons.dart';
 
@@ -202,7 +203,10 @@ class _MyAppState extends State<MyApp> {
                         style: TextStyle(fontFamily: "Poppins-Medium"),
                       ),
                       InkWell(
-                        onTap: () {},
+                        onTap: () {Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => SignUpForm()),
+                        );},
                         child: Text("SignUp",
                             style: TextStyle(
                                 color: Color(0xFF5d74e3),
